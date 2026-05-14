@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 
 import Login from '../pages/Login';
+import LandingPage from '../pages/LandingPage';
 import Signup from '../pages/Signup';
 import Dashboard from '../pages/Dashboard';
 import NotFound from '../pages/NotFound';
@@ -24,6 +25,11 @@ function AppRoutes() {
 
         <Route
           path="/"
+          element={<LandingPage />}
+        />
+
+        <Route
+          path="/login"
           element={<Login />}
         />
 

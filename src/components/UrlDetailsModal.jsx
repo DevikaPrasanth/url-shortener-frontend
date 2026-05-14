@@ -25,9 +25,9 @@ function UrlDetailsModal({
 
   return (
 
-    <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 px-4">
+    <div className="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
 
-      <div className="glass-card rounded-3xl w-full max-w-2xl p-8 relative">
+      <div className="glass-card rounded-3xl w-full max-w-xl p-4 md:p-6 relative scale-95 md:scale-100">
 
         <button
           onClick={onClose}
@@ -36,11 +36,11 @@ function UrlDetailsModal({
           ✕
         </button>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
           <div>
 
-            <h2 className="text-3xl font-bold mb-6">
+            <h2 className="text-2xl font-bold mb-6">
               URL Details
             </h2>
 
@@ -104,7 +104,7 @@ function UrlDetailsModal({
 
                 <button
                   onClick={copyLink}
-                  className="bg-white/5 hover:bg-white/10 transition px-5 py-3 rounded-xl flex items-center gap-2"
+                  className="bg-white/5 hover:bg-white/10 transition px-4 py-2.5 rounded-xl flex items-center gap-2"
                 >
 
                   <Copy size={18} />
@@ -117,7 +117,7 @@ function UrlDetailsModal({
                   href={url.shortUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-indigo-600 hover:bg-indigo-500 transition px-5 py-3 rounded-xl flex items-center gap-2"
+                  className="bg-indigo-600 hover:bg-indigo-500 transition px-4 py-2.5 rounded-xl flex items-center gap-2"
                 >
 
                   <ExternalLink size={18} />
@@ -138,7 +138,7 @@ function UrlDetailsModal({
 
               <QRCode
                 value={url.shortUrl}
-                size={220}
+                size={150}
               />
 
             </div>

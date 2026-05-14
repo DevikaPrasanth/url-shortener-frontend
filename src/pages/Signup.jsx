@@ -174,7 +174,7 @@ function Signup() {
           Already have an account?
 
           <Link
-            to="/"
+            to="/login"
             className="text-indigo-400 ml-2 hover:underline"
           >
             Login
